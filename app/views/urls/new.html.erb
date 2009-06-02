@@ -1,0 +1,8 @@
+<h1>Shorten a url</h1>
+
+<%= error_messages_for :short_url %>
+
+<% form_for(@short_url) do |f| %>
+  <%= f.text_field :location, :size => 80 %>
+  <%= f.submit "shorten &rarr;" %>
+<% end %>

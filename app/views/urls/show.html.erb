@@ -1,0 +1,7 @@
+<h2><%= link_to "#{url_for(:only_path => false)}", "/#{@short_url.slug}" %></h2>
+<p>
+  <%= @short_url.location %>
+</p>
+<p>
+  <%= link_to 'create another short url', new_url_path %>
+</p>

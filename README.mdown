@@ -24,8 +24,10 @@ Then run
 * Click 'Attach gems'
   * Add Rspec
   * Add Rspec-rails
+ 
+## Model
         
-## Generate the Url model
+### Generate the Url model
 
     script/generate rspec_model Url
 
@@ -35,3 +37,7 @@ Then run
     rake db:migrate db:test:prepare
 
 ### Modify the generated model spec. Add tests for your model.
+
+## Controller
+
+    script/server
