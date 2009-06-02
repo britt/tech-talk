@@ -3,8 +3,35 @@
 ## How to install Rails
   
       sudo gem install rails
-      sudo gem install rspec-rails
-  
+
 ## Create the application
     
       rails url_shortener
+
+## Install the RSpec-Rails gem
+
+Edit environments/test.rb and add the following
+
+<script src="http://gist.github.com/122558.js"></script>
+
+Then run
+  
+    rake gems:install RAILS_ENV=test
+    script/generate rspec
+
+### _If you are using Rubymine_
+* Go to Project Settings > Ruby SDK and Gems
+* Click 'Attach gems'
+  * Add Rspec
+  * Add Rspec-rails
+        
+## Generate the Url model
+
+    script/generate rspec_model Url
+
+### Modify the generated migration to create the database schema
+<script src="http://gist.github.com/122577.js"></script>
+
+    rake db:migrate db:test:prepare
+
+### Modify the generated model spec. Add tests for your model.

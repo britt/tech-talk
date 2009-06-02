@@ -20,4 +20,11 @@ describe Url do
       @url.should have(1).error_on(:location)
     end
   end
+
+  describe "after save" do
+    it "should set the url slug" do
+      @url.save!
+      @url.slug.should_not be_blank
+    end
+  end
 end
