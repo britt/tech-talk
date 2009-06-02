@@ -14,6 +14,10 @@ describe UrlsController do
     it "should recognize the show url route" do
       params_from(:get, "/urls/7").should == { :controller => 'urls', :action => 'show', :id => '7'}
     end
+
+    it "urls#new should be the root url" do
+      params_from(:get, '/').should == { :controller => 'urls', :action => 'new'}
+    end  
   end
 
   describe "#new" do
