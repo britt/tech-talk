@@ -1,0 +1,10 @@
+# Tech talk sample application
+
+## How to install Rails
+  
+      sudo gem install rails
+      sudo gem install rspec-rails
+  
+## Create the application
+    
+      rails url_shortener
