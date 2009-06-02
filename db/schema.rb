@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20090602205744) do
+ActiveRecord::Schema.define(:version => 20090602230758) do
 
   create_table "urls", :force => true do |t|
     t.string   "slug"
@@ -17,5 +17,7 @@ ActiveRecord::Schema.define(:version => 20090602205744) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  add_index "urls", ["slug"], :name => "index_urls_on_slug"
 
 end

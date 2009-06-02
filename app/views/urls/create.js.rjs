@@ -1,0 +1,6 @@
+if @success
+  page.replace 'messages', content_tag(:div, "#{link_to(offsite_url(:slug => @short_url.slug),offsite_url(:slug => @short_url.slug))} &rarr; #{@short_url.location}" , :id => 'messages')
+  page.visual_effect :highlight, 'messages'
+else
+  page.replace 'messages', error_messages_for(:short_url, :header_message => nil, :message => nil)
+end
